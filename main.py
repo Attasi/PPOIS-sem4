@@ -4,19 +4,10 @@
 """
 
 import sys
-import os
-
-# Добавляем текущую директорию в путь для импорта (если необходимо)
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from cli import main
 
-
 if __name__ == "__main__":
-    """
-    Запуск приложения.
-    При возникновении ошибок выводит сообщение и завершает работу.
-    """
     try:
         main()
     except KeyboardInterrupt:
