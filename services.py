@@ -234,7 +234,6 @@ class StoreService:
             raise OrderCannotBeReturnedError(order_id, order.status.value)
 
         order.status = OrderStatus.RETURNED
-
         for item in order.items:
             item.product.increase_stock(item.quantity)
 
@@ -299,6 +298,6 @@ class StoreService:
 
     def get_product_by_id(self, product_id: str) -> Optional[Product]:
         for product in self.products:
-            if product.id == product_id:
+            if product.id == product_id or product.id.startswith(product_id):
                 return product
         return None
