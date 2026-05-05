@@ -58,7 +58,7 @@ clothing_store/
 - `id: str` — уникальный идентификатор
 - `email: str` — электронная почта
 - `name: str` — имя пользователя
-- `password_hash: str` — хеш пароля
+- `password_hash: str` — пароль
 - `registered_at: datetime` — дата регистрации
 
 **Методы:**
